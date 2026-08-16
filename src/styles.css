@@ -151,24 +151,26 @@
   overflow: hidden;
 }
 .brand-logo img {
-  display: block;
   object-fit: contain;
 }
-.logo-for-dark {
+.brand-logo img.logo-for-light {
+  display: block;
+}
+.brand-logo img.logo-for-dark {
   display: none;
 }
 @media (prefers-color-scheme: dark) {
-  .logo-for-light {
+  .brand-logo img.logo-for-light {
     display: none;
   }
-  .logo-for-dark {
+  .brand-logo img.logo-for-dark {
     display: block;
   }
 }
-.dark .logo-for-light {
+.dark .brand-logo img.logo-for-light {
   display: none;
 }
-.dark .logo-for-dark {
+.dark .brand-logo img.logo-for-dark {
   display: block;
 }
 
