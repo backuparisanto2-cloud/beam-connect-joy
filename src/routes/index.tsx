@@ -124,6 +124,11 @@ function Index() {
           ))}
         </ul>
 
+        <p className="mt-3 text-xs text-muted-foreground">
+          Plus {IMAGE_COUNT} file gambar di folder <code>img/</code> (latar pagi &amp; malam, logo,
+          favicon). Semua {manifest.fileCount} file ini sudah termasuk di dalam Export ZIP.
+        </p>
+
         <p className="mt-8 text-sm text-muted-foreground">
           Admin WhatsApp:{" "}
           <a className="font-semibold text-foreground" href="https://wa.me/6285888440751">
