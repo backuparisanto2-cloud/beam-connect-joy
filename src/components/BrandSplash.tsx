@@ -20,7 +20,7 @@ export function BrandSplash() {
   return (
     <div className={`brand-splash ${hidden ? "brand-splash--hide" : ""}`} aria-hidden="true">
       <div className="brand-splash__inner">
-        <BrandLogo className="h-6 w-auto sm:h-7 md:h-8" />
+        <BrandLogo className="h-24 w-auto sm:h-28 md:h-32" />
         <p className="brand-splash__name">KOST GRIYA ARCA PUTRI</p>
         <span className="brand-splash__bar">
           <i />

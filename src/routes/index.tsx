@@ -70,7 +70,7 @@ function Index() {
       <BrandSplash />
       <div className="mx-auto w-full max-w-2xl">
         <div className="flex items-center gap-3 text-foreground">
-          <BrandLogo className="h-3.5 w-auto max-w-full shrink-0 sm:h-4 md:h-5" />
+          <BrandLogo className="h-14 w-auto max-w-full shrink-0 sm:h-16 md:h-20" />
           <span className="text-sm font-medium text-muted-foreground">Purwokerto, Jawa Tengah</span>
         </div>
         <h1 className="mt-2 text-2xl font-bold text-foreground sm:text-3xl">

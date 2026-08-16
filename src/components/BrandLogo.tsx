@@ -11,11 +11,12 @@ type BrandLogoProps = {
 
 /** Logo Kost Griya Arca Putri — PNG transparan, menyesuaikan tema terang/gelap. */
 export function BrandLogo({
-  className = "h-3 w-auto max-w-full shrink-0 sm:h-3.5 md:h-4",
+  className = "h-12 w-auto max-w-full shrink-0 sm:h-14 md:h-16",
   noShine = false,
 }: BrandLogoProps) {
   return (
-    <span className={`brand-logo ${noShine ? "" : "brand-logo--shine"} ${className}`}>
+    <span className={`brand-logo scale-[0.88] ${noShine ? "" : "brand-logo--shine"} ${className}`}>
+
       <img
         src={logoLight.url}
         alt="Logo Kost Griya Arca Putri"

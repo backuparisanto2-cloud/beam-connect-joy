@@ -60,7 +60,7 @@ function ManifestPage() {
     <main className="min-h-screen bg-background px-5 py-10">
       <div className="mx-auto w-full max-w-2xl">
         <div className="flex items-center gap-3 text-foreground">
-          <BrandLogo className="h-2.5 w-auto max-w-full shrink-0 text-foreground sm:h-3 md:h-3.5" />
+          <BrandLogo className="h-12 w-auto max-w-full shrink-0 text-foreground sm:h-14 md:h-16" />
           <span className="text-sm font-medium text-muted-foreground">Purwokerto, Jawa Tengah</span>
         </div>
         <a href="/export" className="text-sm font-medium text-muted-foreground">
