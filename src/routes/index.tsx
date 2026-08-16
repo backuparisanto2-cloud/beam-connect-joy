@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BrandLogo } from "@/components/BrandLogo";
+import manifest from "@/data/hotspot-manifest.json";
 
 const TITLE = "Hotspot Griya Arca Kost — File Login MikroTik";
 const DESC =
@@ -17,20 +18,50 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const FILES: { name: string; desc: string }[] = [
-  { name: "login.html", desc: "Halaman login member (username + password)" },
-  { name: "alogin.html", desc: "Halaman setelah berhasil login" },
-  { name: "status.html", desc: "Status koneksi & tombol logout" },
-  { name: "logout.html", desc: "Halaman setelah logout" },
-  { name: "error.html", desc: "Halaman error" },
-  { name: "rlogin.html", desc: "Auto-login by MAC (bawaan MikroTik)" },
-  { name: "redirect.html", desc: "Halaman pengalih (bawaan MikroTik)" },
-  { name: "faq.html", desc: "FAQ & SOP penggunaan internet kost" },
-  { name: "style.css", desc: "Tema tampilan semua halaman" },
-  { name: "img/bg-login.jpg", desc: "Latar suasana kamar kost" },
-  { name: "img/bg-nature.jpg", desc: "Latar pemandangan alam Purwokerto" },
-  { name: "README.txt", desc: "Panduan upload ke router" },
+const DESCRIPTIONS: Record<string, string> = {
+  "login.html": "Halaman login member (username + password)",
+  "alogin.html": "Halaman setelah berhasil login",
+  "status.html": "Status koneksi & tombol logout",
+  "logout.html": "Halaman setelah logout",
+  "error.html": "Halaman error",
+  "rlogin.html": "Auto-login by MAC (bawaan MikroTik)",
+  "redirect.html": "Halaman pengalih (bawaan MikroTik)",
+  "faq.html": "FAQ & SOP penggunaan internet kost",
+  "style.css": "Tema tampilan semua halaman",
+  "theme.js": "Tema otomatis siang/malam (jam WIB)",
+  "preload.js": "Pramuat gambar latar agar cepat",
+  "md5.js": "Enkripsi password login CHAP (wajib ada)",
+  "README.txt": "Panduan upload ke router",
+  "IPHONE-COMPAT.md": "Catatan kompatibilitas iPhone/iOS",
+};
+
+const ORDER = [
+  "login.html",
+  "alogin.html",
+  "status.html",
+  "logout.html",
+  "error.html",
+  "rlogin.html",
+  "redirect.html",
+  "faq.html",
+  "style.css",
+  "theme.js",
+  "preload.js",
+  "md5.js",
+  "README.txt",
+  "IPHONE-COMPAT.md",
 ];
+
+const IMAGE_COUNT = manifest.files.filter((f) => f.name.startsWith("img/")).length;
+
+const FILES: { name: string; desc: string }[] = manifest.files
+  .filter((f) => !f.name.startsWith("img/"))
+  .map((f) => ({ name: f.name, desc: DESCRIPTIONS[f.name] ?? "File pendukung halaman hotspot" }))
+  .sort((a, b) => {
+    const ia = ORDER.indexOf(a.name);
+    const ib = ORDER.indexOf(b.name);
+    return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib) || a.name.localeCompare(b.name);
+  });
 
 function Index() {
   return (
