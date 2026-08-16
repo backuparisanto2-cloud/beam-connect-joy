@@ -1,9 +1,9 @@
 {
   "archive": "griya-arca-hotspot.zip",
-  "builtAt": "2026-08-16T14:44:38.822Z",
+  "builtAt": "2026-08-16T14:47:02.810Z",
   "fileCount": 30,
-  "zipBytes": 557404,
-  "totalBytes": 602568,
+  "zipBytes": 557412,
+  "totalBytes": 602578,
   "files": [
     {
       "name": "alogin.html",
@@ -147,8 +147,8 @@
     },
     {
       "name": "style.css",
-      "bytes": 22997,
-      "modifiedAt": "2026-08-16T14:43:20.975Z"
+      "bytes": 23007,
+      "modifiedAt": "2026-08-16T14:46:59.306Z"
     },
     {
       "name": "theme.js",
