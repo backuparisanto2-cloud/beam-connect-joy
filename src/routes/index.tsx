@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BrandLogo } from "@/components/BrandLogo";
+import { BrandSplash } from "@/components/BrandSplash";
 import manifest from "@/data/hotspot-manifest.json";
 
 const TITLE = "Hotspot Kost Griya Arca Putri — File Login MikroTik";
