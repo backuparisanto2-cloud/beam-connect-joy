@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BrandLogo } from "@/components/BrandLogo";
 
-const TITLE = "Export Paket Hotspot (ZIP) — Griya Arca Kost";
+const TITLE = "Export Paket Hotspot (ZIP) — Kost Griya Arca Putri";
 const DESC =
-  "Unduh satu folder lengkap berisi seluruh file halaman hotspot MikroTik Griya Arca Kost, termasuk gambar latar, dalam format ZIP siap upload.";
+  "Unduh satu folder lengkap berisi seluruh file halaman hotspot MikroTik Kost Griya Arca Putri, termasuk gambar latar, dalam format ZIP siap upload.";
 
 export const Route = createFileRoute("/export")({
   head: () => ({

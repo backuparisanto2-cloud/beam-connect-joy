@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { BrandLogo } from "@/components/BrandLogo";
 import manifest from "@/data/hotspot-manifest.json";
 
-const TITLE = "Hotspot Griya Arca Kost — File Login MikroTik";
+const TITLE = "Hotspot Kost Griya Arca Putri — File Login MikroTik";
 const DESC =
-  "Unduh file halaman login hotspot MikroTik Griya Arca Kost Purwokerto: login, status, logout, error, plus FAQ dan SOP internet kost.";
+  "Unduh file halaman login hotspot MikroTik Kost Griya Arca Putri Purwokerto: login, status, logout, error, plus FAQ dan SOP internet kost.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

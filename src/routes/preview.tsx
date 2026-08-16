@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { BrandLogo } from "@/components/BrandLogo";
 
-const TITLE = "Pratinjau Halaman Login Hotspot — Griya Arca Kost";
+const TITLE = "Pratinjau Halaman Login Hotspot — Kost Griya Arca Putri";
 const DESC =
-  "Lihat pratinjau halaman login, status, dan FAQ hotspot MikroTik Griya Arca Kost dalam bingkai iPhone 8 hingga iPhone 15 Pro Max.";
+  "Lihat pratinjau halaman login, status, dan FAQ hotspot MikroTik Kost Griya Arca Putri dalam bingkai iPhone 8 hingga iPhone 15 Pro Max.";
 
 export const Route = createFileRoute("/preview")({
   head: () => ({
