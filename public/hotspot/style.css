@@ -34,10 +34,8 @@ body::before{
 .brand{text-align:center;margin-bottom:22px;max-width:100%}
 .brand .logo-wrap{
   display:inline-flex;align-items:center;justify-content:center;
-  padding:10px 18px;border-radius:22px;max-width:100%;
-  background:rgba(8,10,18,.42);
-  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,.14);
+  max-width:100%;
+  background:none;border:0;padding:0;
 }
 .brand svg{
   display:block;margin:0 auto;
@@ -51,16 +49,15 @@ body::before{
 }
 @media (max-height:520px),(orientation:landscape) and (max-height:600px){
   .brand{margin-bottom:12px}
-  .brand .logo-wrap{padding:6px 12px;border-radius:16px}
   .brand svg{width:clamp(56px,12vh,88px)}
 }
 @media (prefers-contrast:more){
-  .brand .logo-wrap{background:rgba(0,0,0,.72);border-color:#fff}
+  .brand .logo-wrap{background:none;border:0}
   .brand svg{filter:none;stroke-width:4.4}
   .brand .name{text-shadow:none}
 }
 @media (forced-colors:active){
-  .brand .logo-wrap{background:Canvas;border-color:CanvasText}
+  .brand .logo-wrap{background:none;border:0}
   .brand svg{color:CanvasText;filter:none}
   .brand .name{color:CanvasText;text-shadow:none}
 }
@@ -248,7 +245,6 @@ html[data-theme="light"] body::before{
 }
 
 html[data-theme="light"] .brand .name{color:#141210;text-shadow:0 1px 8px rgba(255,255,255,.95)}
-html[data-theme="light"] .brand .logo-wrap{background:rgba(255,255,255,.62);border-color:rgba(20,18,16,.18)}
 html[data-theme="light"] .brand svg{color:#141210;filter:drop-shadow(0 1px 0 rgba(255,255,255,.95)) drop-shadow(0 2px 8px rgba(255,255,255,.85))}
 html[data-theme="light"] .card{
   background:var(--panel);
@@ -289,9 +285,9 @@ html[data-theme="light"] .page h2{color:#1c1917}
 .theme svg{width:22px;height:22px}
 html[data-theme="light"] .theme{border-color:rgba(120,90,70,.4);background:rgba(255,250,245,.6);color:#1c1917}
 
-/* ===== Lapisan suasana: kunang-kunang (gelap) & burung sawah (terang) ===== */
+/* ===== Lapisan suasana: kunang-kunang (gelap) & awan biru (terang) ===== */
 .fx{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.fx .ff,.fx .bird{position:absolute;will-change:transform,opacity}
+.fx .ff,.fx .cloud{position:absolute;will-change:transform,opacity}
 
 /* Kunang-kunang */
 .fx .ff{
@@ -323,35 +319,34 @@ html[data-theme="light"] .theme{border-color:rgba(120,90,70,.4);background:rgba(
 .fx .ff:nth-child(13){left:44%;top:60%;animation-duration:26s,3.3s;animation-delay:5.2s,.5s}
 .fx .ff:nth-child(14){left:66%;top:58%;animation-duration:25s,3.5s;animation-delay:2.9s,1.9s}
 
-/* Burung sawah */
-.fx .bird{right:-14vw;color:rgba(40,48,60,.62);opacity:0;animation:birdFly linear infinite}
-.fx .bird svg{display:block;width:100%;height:auto;animation:birdFlap ease-in-out infinite}
-@keyframes birdFly{
-  0%{transform:translate3d(0,0,0);opacity:0}
-  6%{opacity:.85}
-  40%{transform:translate3d(-45vw,-4vh,0)}
-  70%{transform:translate3d(-80vw,3vh,0)}
-  94%{opacity:.85}
-  100%{transform:translate3d(-120vw,-2vh,0);opacity:0}
+/* Awan biru (tema terang) */
+.fx .cloud{
+  right:-40vw;top:12%;opacity:0;
+  border-radius:999px;
+  background:
+    radial-gradient(closest-side at 30% 60%, rgba(255,255,255,.95), rgba(255,255,255,0) 100%),
+    radial-gradient(closest-side at 62% 42%, rgba(255,255,255,.92), rgba(255,255,255,0) 100%),
+    radial-gradient(closest-side at 50% 78%, rgba(186,216,246,.72), rgba(186,216,246,0) 100%);
+  filter:blur(2px);
+  animation:cloudDrift linear infinite;
 }
-@keyframes birdFlap{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.45)}}
-.fx .bird:nth-of-type(1){top:16%;width:44px;animation-duration:26s;animation-delay:0s}
-.fx .bird:nth-of-type(1) svg{animation-duration:.62s}
-.fx .bird:nth-of-type(2){top:22%;width:30px;animation-duration:34s;animation-delay:3s}
-.fx .bird:nth-of-type(2) svg{animation-duration:.5s}
-.fx .bird:nth-of-type(3){top:11%;width:36px;animation-duration:30s;animation-delay:8s}
-.fx .bird:nth-of-type(3) svg{animation-duration:.72s}
-.fx .bird:nth-of-type(4){top:28%;width:24px;animation-duration:40s;animation-delay:13s}
-.fx .bird:nth-of-type(4) svg{animation-duration:.56s}
-.fx .bird:nth-of-type(5){top:34%;width:20px;animation-duration:46s;animation-delay:19s}
-.fx .bird:nth-of-type(5) svg{animation-duration:.66s}
-.fx .bird:nth-of-type(6){top:19%;width:28px;animation-duration:37s;animation-delay:24s}
-.fx .bird:nth-of-type(6) svg{animation-duration:.58s}
+@keyframes cloudDrift{
+  0%{transform:translate3d(0,0,0);opacity:0}
+  10%{opacity:.9}
+  90%{opacity:.9}
+  100%{transform:translate3d(-180vw,-2vh,0);opacity:0}
+}
+.fx .cloud:nth-of-type(1){top:10%;width:46vw;height:12vw;animation-duration:80s;animation-delay:0s}
+.fx .cloud:nth-of-type(2){top:18%;width:32vw;height:9vw;animation-duration:104s;animation-delay:9s;opacity:0}
+.fx .cloud:nth-of-type(3){top:6%;width:24vw;height:7vw;animation-duration:92s;animation-delay:22s}
+.fx .cloud:nth-of-type(4){top:26%;width:38vw;height:10vw;animation-duration:126s;animation-delay:34s}
+.fx .cloud:nth-of-type(5){top:33%;width:20vw;height:6vw;animation-duration:112s;animation-delay:52s}
+.fx .cloud:nth-of-type(6){top:15%;width:28vw;height:8vw;animation-duration:140s;animation-delay:66s}
 
 /* Tampil sesuai tema */
-.fx .bird{display:none}
+.fx .cloud{display:none}
 html[data-theme="light"] .fx .ff{display:none}
-html[data-theme="light"] .fx .bird{display:block}
+html[data-theme="light"] .fx .cloud{display:block}
 
 @media (prefers-reduced-motion:reduce){
   .fx{display:none}
