@@ -46,7 +46,7 @@ function PreviewPage() {
     <main className="min-h-screen bg-background px-5 py-10">
       <div className="mx-auto w-full max-w-3xl">
         <div className="flex items-center gap-3 text-foreground">
-          <BrandLogo className="h-10 w-auto max-w-full shrink-0 text-foreground sm:h-12 md:h-14" />
+          <BrandLogo className="h-2.5 w-auto max-w-full shrink-0 text-foreground sm:h-3 md:h-3.5" />
           <span className="text-sm font-medium text-muted-foreground">Purwokerto, Jawa Tengah</span>
         </div>
         <a href="/" className="text-sm font-medium text-muted-foreground">
