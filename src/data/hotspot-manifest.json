@@ -1,9 +1,9 @@
 {
   "archive": "griya-arca-hotspot.zip",
-  "builtAt": "2026-08-16T14:20:55.525Z",
+  "builtAt": "2026-08-16T14:26:01.853Z",
   "fileCount": 28,
-  "zipBytes": 348269,
-  "totalBytes": 398701,
+  "zipBytes": 348064,
+  "totalBytes": 396053,
   "files": [
     {
       "name": "alogin.html",
@@ -97,8 +97,8 @@
     },
     {
       "name": "login.html",
-      "bytes": 7999,
-      "modifiedAt": "2026-08-16T14:20:36.782Z"
+      "bytes": 6916,
+      "modifiedAt": "2026-08-16T14:25:03.135Z"
     },
     {
       "name": "logout.html",
@@ -127,8 +127,8 @@
     },
     {
       "name": "rlogin.html",
-      "bytes": 4638,
-      "modifiedAt": "2026-08-16T14:20:36.784Z"
+      "bytes": 3552,
+      "modifiedAt": "2026-08-16T14:25:03.135Z"
     },
     {
       "name": "status.html",
@@ -137,8 +137,8 @@
     },
     {
       "name": "style.css",
-      "bytes": 22423,
-      "modifiedAt": "2026-08-16T14:20:36.784Z"
+      "bytes": 21944,
+      "modifiedAt": "2026-08-16T14:25:27.030Z"
     },
     {
       "name": "theme.js",
