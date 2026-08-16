@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BrandLogo } from "@/components/BrandLogo";
+import { BrandSplash } from "@/components/BrandSplash";
 import manifest from "@/data/hotspot-manifest.json";
 
-const TITLE = "Hotspot Griya Arca Kost — File Login MikroTik";
+const TITLE = "Hotspot Kost Griya Arca Putri — File Login MikroTik";
 const DESC =
-  "Unduh file halaman login hotspot MikroTik Griya Arca Kost Purwokerto: login, status, logout, error, plus FAQ dan SOP internet kost.";
+  "Unduh file halaman login hotspot MikroTik Kost Griya Arca Putri Purwokerto: login, status, logout, error, plus FAQ dan SOP internet kost.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,12 +67,13 @@ const FILES: { name: string; desc: string }[] = manifest.files
 function Index() {
   return (
     <main className="min-h-screen bg-background px-5 py-10">
+      <BrandSplash />
       <div className="mx-auto w-full max-w-2xl">
         <div className="flex items-center gap-3 text-foreground">
-          <BrandLogo className="h-10 w-auto max-w-full shrink-0 text-foreground sm:h-12 md:h-14" />
+          <BrandLogo className="h-14 w-auto max-w-full shrink-0 sm:h-16 md:h-20" />
           <span className="text-sm font-medium text-muted-foreground">Purwokerto, Jawa Tengah</span>
         </div>
-        <h1 className="mt-1 text-2xl font-bold text-foreground sm:text-3xl">
+        <h1 className="mt-2 text-2xl font-bold text-foreground sm:text-3xl">
           File Halaman Hotspot MikroTik
         </h1>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">

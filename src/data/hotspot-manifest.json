@@ -1,24 +1,24 @@
 {
   "archive": "griya-arca-hotspot.zip",
-  "builtAt": "2026-08-16T14:26:46.072Z",
-  "fileCount": 28,
-  "zipBytes": 348067,
-  "totalBytes": 396051,
+  "builtAt": "2026-08-16T14:39:13.017Z",
+  "fileCount": 30,
+  "zipBytes": 557404,
+  "totalBytes": 602572,
   "files": [
     {
       "name": "alogin.html",
-      "bytes": 6042,
-      "modifiedAt": "2026-08-16T14:20:36.777Z"
+      "bytes": 4419,
+      "modifiedAt": "2026-08-16T14:38:48.231Z"
     },
     {
       "name": "error.html",
-      "bytes": 2671,
-      "modifiedAt": "2026-08-16T14:20:36.777Z"
+      "bytes": 2143,
+      "modifiedAt": "2026-08-16T14:38:48.231Z"
     },
     {
       "name": "faq.html",
-      "bytes": 13840,
-      "modifiedAt": "2026-08-16T14:20:36.778Z"
+      "bytes": 13348,
+      "modifiedAt": "2026-08-16T14:38:48.231Z"
     },
     {
       "name": "img/bg-morning1-sm.webp",
@@ -82,8 +82,18 @@
     },
     {
       "name": "img/favicon.png",
-      "bytes": 9632,
-      "modifiedAt": "2026-08-16T14:20:36.781Z"
+      "bytes": 6740,
+      "modifiedAt": "2026-08-16T14:39:08.954Z"
+    },
+    {
+      "name": "img/logo-dark.png",
+      "bytes": 102868,
+      "modifiedAt": "2026-08-16T14:38:29.533Z"
+    },
+    {
+      "name": "img/logo-light.png",
+      "bytes": 110139,
+      "modifiedAt": "2026-08-16T14:38:28.847Z"
     },
     {
       "name": "img/logo.svg",
@@ -97,13 +107,13 @@
     },
     {
       "name": "login.html",
-      "bytes": 6916,
-      "modifiedAt": "2026-08-16T14:25:03.135Z"
+      "bytes": 5944,
+      "modifiedAt": "2026-08-16T14:38:48.231Z"
     },
     {
       "name": "logout.html",
-      "bytes": 2869,
-      "modifiedAt": "2026-08-16T14:20:36.782Z"
+      "bytes": 2347,
+      "modifiedAt": "2026-08-16T14:38:48.232Z"
     },
     {
       "name": "md5.js",
@@ -122,23 +132,23 @@
     },
     {
       "name": "redirect.html",
-      "bytes": 1825,
-      "modifiedAt": "2026-08-16T14:20:36.783Z"
+      "bytes": 1831,
+      "modifiedAt": "2026-08-16T14:38:48.232Z"
     },
     {
       "name": "rlogin.html",
-      "bytes": 3552,
-      "modifiedAt": "2026-08-16T14:25:03.135Z"
+      "bytes": 3558,
+      "modifiedAt": "2026-08-16T14:38:48.236Z"
     },
     {
       "name": "status.html",
-      "bytes": 3833,
-      "modifiedAt": "2026-08-16T14:20:36.784Z"
+      "bytes": 3305,
+      "modifiedAt": "2026-08-16T14:38:48.237Z"
     },
     {
       "name": "style.css",
-      "bytes": 21942,
-      "modifiedAt": "2026-08-16T14:26:45.682Z"
+      "bytes": 23001,
+      "modifiedAt": "2026-08-16T14:38:48.230Z"
     },
     {
       "name": "theme.js",

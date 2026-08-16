@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import manifest from "@/data/hotspot-manifest.json";
 import { BrandLogo } from "@/components/BrandLogo";
 
-const TITLE = "Manifest Paket Hotspot — Griya Arca Kost";
+const TITLE = "Manifest Paket Hotspot — Kost Griya Arca Putri";
 const DESC =
-  "Daftar lengkap 14 berkas di dalam griya-arca-hotspot.zip beserta ukuran file dan tanggal build paket hotspot MikroTik Griya Arca Kost.";
+  "Daftar lengkap 14 berkas di dalam griya-arca-hotspot.zip beserta ukuran file dan tanggal build paket hotspot MikroTik Kost Griya Arca Putri.";
 
 export const Route = createFileRoute("/manifest")({
   head: () => ({
