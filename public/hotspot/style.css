@@ -336,12 +336,12 @@ html[data-theme="light"] .theme{border-color:rgba(120,90,70,.4);background:rgba(
   90%{opacity:.9}
   100%{transform:translate3d(-180vw,-2vh,0);opacity:0}
 }
-.fx .cloud:nth-of-type(1){top:10%;width:46vw;height:12vw;animation-duration:80s;animation-delay:0s}
-.fx .cloud:nth-of-type(2){top:18%;width:32vw;height:9vw;animation-duration:104s;animation-delay:9s;opacity:0}
-.fx .cloud:nth-of-type(3){top:6%;width:24vw;height:7vw;animation-duration:92s;animation-delay:22s}
-.fx .cloud:nth-of-type(4){top:26%;width:38vw;height:10vw;animation-duration:126s;animation-delay:34s}
-.fx .cloud:nth-of-type(5){top:33%;width:20vw;height:6vw;animation-duration:112s;animation-delay:52s}
-.fx .cloud:nth-of-type(6){top:15%;width:28vw;height:8vw;animation-duration:140s;animation-delay:66s}
+.fx .cloud:nth-of-type(1){top:10%;width:46vw;height:12vw;animation-duration:80s;animation-delay:-24s}
+.fx .cloud:nth-of-type(2){top:18%;width:32vw;height:9vw;animation-duration:104s;animation-delay:-62s}
+.fx .cloud:nth-of-type(3){top:6%;width:24vw;height:7vw;animation-duration:92s;animation-delay:-8s}
+.fx .cloud:nth-of-type(4){top:26%;width:38vw;height:10vw;animation-duration:126s;animation-delay:-96s}
+.fx .cloud:nth-of-type(5){top:33%;width:20vw;height:6vw;animation-duration:112s;animation-delay:-40s}
+.fx .cloud:nth-of-type(6){top:15%;width:28vw;height:8vw;animation-duration:140s;animation-delay:-130s}
 
 /* Tampil sesuai tema */
 .fx .cloud{display:none}
