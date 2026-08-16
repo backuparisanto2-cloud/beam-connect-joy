@@ -142,3 +142,134 @@
     color: var(--color-foreground);
   }
 }
+
+/* ── Brand logo (PNG transparan, adaptif tema) ─────────────────────── */
+.brand-logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+}
+.brand-logo img {
+  display: block;
+  object-fit: contain;
+}
+.logo-for-dark {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  .logo-for-light {
+    display: none;
+  }
+  .logo-for-dark {
+    display: block;
+  }
+}
+.dark .logo-for-light {
+  display: none;
+}
+.dark .logo-for-dark {
+  display: block;
+}
+
+/* Kilau cahaya melintas dari kiri ke kanan setiap 10 detik */
+.brand-logo--shine::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 55%;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 20%,
+    color-mix(in oklab, white 70%, transparent) 50%,
+    transparent 80%
+  );
+  mix-blend-mode: overlay;
+  transform: translateX(-160%) skewX(-14deg);
+  animation: brand-shine 10s linear infinite;
+}
+@keyframes brand-shine {
+  0% {
+    transform: translateX(-160%) skewX(-14deg);
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  12% {
+    transform: translateX(320%) skewX(-14deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(320%) skewX(-14deg);
+    opacity: 0;
+  }
+}
+
+/* ── Splash screen ─────────────────────────────────────────────────── */
+.brand-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  background: var(--background);
+  transition: opacity 0.6s ease;
+}
+.brand-splash--hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.brand-splash__inner {
+  display: grid;
+  justify-items: center;
+  gap: 1.15rem;
+  animation: brand-splash-rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.brand-splash__name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  color: var(--muted-foreground);
+}
+.brand-splash__bar {
+  display: block;
+  width: min(180px, 46vw);
+  height: 2px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--foreground) 12%, transparent);
+  overflow: hidden;
+}
+.brand-splash__bar i {
+  display: block;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, var(--foreground), transparent);
+  animation: brand-splash-bar 1.1s linear infinite;
+}
+@keyframes brand-splash-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes brand-splash-bar {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(320%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo--shine::after,
+  .brand-splash__inner,
+  .brand-splash__bar i {
+    animation: none;
+  }
+}
